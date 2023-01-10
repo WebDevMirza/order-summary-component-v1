@@ -1,0 +1,104 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /*  ===============================
+      Colors
+      ===============================   */
+  --bg-brightblue: hsl(245, 75%, 52%);
+  --bg-brightblue--shadow: hsla(245, 75%, 52%, 0.329);
+  --bg-paleblue: hsl(225, 100%, 94%);
+  --tm-desaturatedblue: hsl(224, 23%, 55%);
+  --tf-darkblue: hsl(223, 47%, 23%);
+  --bg-verypaleblue: hsl(225, 100%, 98%);
+
+  /* ===============================
+     Fonts
+     ===============================  */
+  --ff-RedHatDisplay: "Red Hat Display", sans-serif;
+  --fs-fontsize: 1rem;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+  --line-height: 1.5;
+}
+
+/* ==============================
+   Body
+   ==============================  */
+
+body {
+  margin: 0;
+  font-family: var(--ff-RedHatDisplay);
+  font-size: var(--fs-fontsize);
+  font-weight: var(--fw-500);
+  line-height: var(--line-height);
+  color: var(--tm-desaturatedblue);
+  background-color: var(--bg-paleblue);
+  text-align: center;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+}
+
+/* ==============================
+   Layout
+   ============================== */
+
+.con-main {
+  max-width: 375px;
+  min-height: 100vh;
+}
+
+.card-img {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.bg-accent {
+  background-color: var(--bg-verypaleblue);
+  padding: 1rem 0;
+}
+
+/* ================================
+   Typography
+   ================================ */
+
+.text-head {
+  color: var(--tf-darkblue);
+  font-weight: var(--fw-900);
+}
+a {
+  color: var(--tf-darkblue);
+  font-weight: var(--fw-700);
+}
+
+.btn,
+.btn-cancel {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-fontsize);
+  padding: 0.8rem 0;
+}
+
+.btn-payment {
+  background-color: var(--bg-brightblue);
+  box-shadow: 0 10px 15px var(--bg-brightblue--shadow);
+}
+
+.btn-cancel {
+  color: var(--tm-desaturatedblue);
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+  color: rgb(44, 44, 44);
+}
